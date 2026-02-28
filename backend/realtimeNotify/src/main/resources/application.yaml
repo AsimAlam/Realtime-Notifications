@@ -8,8 +8,9 @@ spring:
       ddl-auto: update
     show-sql: false
   redis:
-    host: 127.0.0.1
-    port: 6379
+    url: ${SPRING_REDIS_URL:}
+    host: ${SPRING_REDIS_HOST:127.0.0.1}
+    port: ${SPRING_REDIS_PORT:6379}
 
   profiles:
     active: dev

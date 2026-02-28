@@ -9,9 +9,10 @@ spring:
       ddl-auto: update
     show-sql: true
 
-#  redis:
-#    host: 127.0.0.1
-#    port: 6379
+  redis:
+    url: ${SPRING_REDIS_URL:}
+    host: ${SPRING_REDIS_HOST:localhost}
+    port: ${SPRING_REDIS_PORT:6379}
 
   sql:
     init:
